@@ -5,29 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page 2</title>
-    <link rel="stylesheet" crossorigin href="/yield-track/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/yield-track/assets/styles-DDzUcdcA.css">
   </head>
   <body>
     <header class="header">
-  <div class="container">
+  <div class="container header__wrapper">
+    <a href="./#hero" class="logo">
+      YIELD<span>_</span>TRACK
+    </a>
+
     <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+      <ul class="nav__list">
+        <li><a href="./#hero" class="nav__link">Главная</a></li>
+        <li><a href="./#strategy" class="nav__link">Стратегия</a></li>
+        <li><a href="./#experience" class="nav__link">Опыт</a></li>
+        <li><a href="./#blog" class="nav__link">Блог</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="./#contact" class="btn btn--header">Связаться</a>
+      <button class="burger" id="burger-menu" aria-label="Открыть меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>
-
 
     <main>
       <div class="container">
@@ -38,20 +43,49 @@
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
-      </a>
-    </p>
+  <div class="container footer__grid">
+    <div class="footer__col footer__col--brand">
+      <a href="./#hero" class="logo logo--footer">YIELD_TRACK</a>
+      <p class="footer__text">
+        Переосмыслите подход к развитию вместе с экспертной поддержкой на всех этапах вашего роста. Карьера, которая
+        работает на вас.
+      </p>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Навигация</h4>
+      <ul class="footer__list">
+        <li><a href="./#hero">Главная</a></li>
+        <li><a href="./#strategy">Стратегия</a></li>
+        <li><a href="./#experience">Опыт</a></li>
+        <li><a href="./#blog">Блог</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Документы</h4>
+      <ul class="footer__list">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="cookies.html">Cookie Policy</a></li>
+        <li><a href="terms.html">Terms of Service</a></li>
+        <li><a href="return.html">Return Policy</a></li>
+        <li><a href="disclaimer.html">Disclaimer</a></li>
+        <li><a href="personal-data-policy.html">Personal Data</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4 class="footer__title">Италия</h4>
+      <ul class="footer__list footer__list--contact">
+        <li>Via Dante 17, 20123 Milano MI, Italy</li>
+        <li><a href="tel:+390245371289">+39 02 4537 1289</a></li>
+        <li><a href="mailto:hello@yield-track.fit">hello@yield-track.fit</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <p>&copy; 2026 Yield Track. Платформа уже доступна в Европе.</p>
   </div>
 </footer>
-
   </body>
 </html>
