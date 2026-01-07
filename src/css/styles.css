@@ -1002,3 +1002,258 @@ img {
 .burger.active span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
+/* Стили для страниц документов (Privacy, Cookies и т.д.) */
+.pages {
+    padding: 160px 0 100px;
+    background: var(--clr-bg);
+    min-height: 100vh;
+}
+
+.pages__back {
+    margin-bottom: 40px;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--clr-primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.pages__title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    line-height: 1.1;
+    color: var(--clr-white);
+    margin-bottom: 60px;
+    max-width: 900px;
+}
+
+.pages__content {
+    max-width: 800px;
+    /* Оптимальная ширина для чтения текста */
+}
+
+.pages__content h2 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--clr-white);
+    margin-top: 60px;
+    margin-bottom: 25px;
+    border-left: 3px solid var(--clr-primary);
+    padding-left: 20px;
+}
+
+.pages__content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--clr-text-muted);
+    margin-bottom: 25px;
+}
+
+.pages__list {
+    margin-bottom: 40px;
+}
+
+.pages__list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 20px;
+    color: var(--clr-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.pages__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 8px;
+    height: 2px;
+    background: var(--clr-primary);
+}
+
+.pages__list strong {
+    color: var(--clr-white);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.pages__link {
+    color: var(--clr-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+}
+
+.pages__contact-box {
+    margin-top: 80px;
+    padding: 40px;
+    background: var(--clr-surface);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pages__contact-box h2 {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .pages {
+        padding-top: 120px;
+    }
+
+    .pages__title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .pages__content h2 {
+        font-size: 1.5rem;
+    }
+
+    .pages__contact-box {
+        padding: 30px 20px;
+    }
+}
+
+/* Специальные блоки для Дисклеймера */
+.disclaimer-block {
+    padding: 30px;
+    background: var(--clr-surface);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.disclaimer-block:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.disclaimer-block p {
+    margin-bottom: 0 !important;
+    font-size: 1rem !important;
+}
+
+.disclaimer-block strong {
+    color: var(--clr-primary);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Блок предупреждения о рисках */
+.disclaimer-block--warning {
+    border-left: 4px solid #ff5555;
+    background: linear-gradient(90deg, rgba(255, 85, 85, 0.05) 0%, transparent 100%);
+}
+
+.disclaimer-block--warning strong {
+    color: #ff5555;
+}
+
+/* Блок подтверждения 18+ */
+.disclaimer-block--accent {
+    border: 1px solid var(--clr-primary);
+    background: rgba(76, 201, 240, 0.03);
+}
+
+.pages__footer-note {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.85rem;
+    color: var(--clr-text-muted);
+}
+
+.pages__footer-note strong {
+    color: var(--clr-white);
+}
+/* Специальное оформление для разделов политики */
+.policy-section {
+    margin-bottom: 50px;
+}
+
+.policy-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--clr-primary);
+    /* Бирюзовый заголовок */
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Эффект при наведении на пункты списка */
+.pages__list li {
+    transition: var(--transition);
+    border-radius: 8px;
+}
+
+.pages__list li:hover {
+    color: var(--clr-white);
+    transform: translateX(5px);
+}
+
+.pages__list strong {
+    color: var(--clr-primary);
+    font-weight: 600;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .policy-section {
+        margin-bottom: 35px;
+    }
+
+    .policy-section h2 {
+        font-size: 1.3rem;
+    }
+}
+/* Стилизация нумерованного списка процедур */
+.pages__order-list {
+    counter-reset: custom-counter;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 40px;
+}
+
+.pages__order-list li {
+    counter-increment: custom-counter;
+    position: relative;
+    padding-left: 50px;
+    margin-bottom: 25px;
+    color: var(--clr-text-muted);
+    line-height: 1.6;
+}
+
+.pages__order-list li::before {
+    content: counter(custom-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    background: rgba(76, 201, 240, 0.1);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Акцент на важные сроки */
+.policy-block strong {
+    color: var(--clr-white);
+}
